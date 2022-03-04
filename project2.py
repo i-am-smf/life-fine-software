@@ -14,7 +14,7 @@ today=now.strftime("%d-%m-%Y")
 
 main=Tk()
 main.title("LifeFine")
-main.iconbitmap("E:\programming\TEST PROJECT 1\LIFEFINE\lf2.ico")
+main.iconbitmap("lf2.ico")
 main.geometry("1500x800")
 main.configure(bg="cornflowerblue")
 main.state('zoomed')
@@ -33,11 +33,11 @@ for frame in (frame1,frame2,frame3,frame4,frame5):
     main.grid_columnconfigure(0,weight=1)
     main.grid_rowconfigure(0,weight=1)
 
-bg1=PhotoImage(file="E:\programming\TEST PROJECT 1\LIFEFINE\lf3.png")
+bg1=PhotoImage(file="lf3.png")
 my_label=Label(frame1,image=bg1)
 my_label.place(x=0,y=0,relwidth=1,relheight=1)
 
-bg2=PhotoImage(file="E:\programming\TEST PROJECT 1\LIFEFINE\lf1.png")
+bg2=PhotoImage(file="lf1.png")
 my_label=Label(frame3,image=bg2)
 my_label.place(x=0,y=0,relwidth=1,relheight=1)
 
@@ -74,13 +74,13 @@ def create_database():
         mydb=mysql.connector.connect(
             host="localhost",
             user="root",
-            passwd="smfsql123",
+            passwd="PASSWORD",
             database="LIFEFINE"
         )
         mydb1=mysql.connector.connect(
             host="localhost",
             user="root",
-            passwd="smfsql123",
+            passwd="PASSWORD",
             database="LIFEFINE_CUSTOMERS"
         )
         global my_cursor
@@ -94,7 +94,7 @@ def create_database():
         mydb=mysql.connector.connect(
             host="localhost",
             user="root",
-            passwd="smfsql123"
+            passwd="PASSWORD"
         )
         my_cursor=mydb.cursor()
         my_cursor.execute("CREATE DATABASE LIFEFINE")
@@ -410,7 +410,7 @@ def new_customer():
 def list_customer():
     list_customer_query=Tk()
     list_customer_query.title("LIFEFINE CUSTOMER DATA")
-    #list_customer_query.iconbitmap(cwd+"\LIFEFINE\icons\lf2.ico")
+    list_customer_query.iconbitmap(lf2.ico")
     list_customer_query.geometry("800x600")
     list_customer_query.configure(bg="beige")
     list_customer_query.state('zoomed')
