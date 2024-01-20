@@ -6,7 +6,7 @@ from PIL import Image,ImageTk
 import os
 import mysql.connector
 
-cwd=os.getcwd()
+# cwd=os.getcwd()
 now=datetime.now()
 yr=now.strftime("%Y")
 yr1=int(yr)
@@ -19,7 +19,7 @@ main.geometry("1500x800")
 main.configure(bg="cornflowerblue")
 main.state('zoomed')
 
-def show_frame(frame):
+def show_frame(frame:Frame):
     frame.tkraise()
 
 frame1=Frame(main)
@@ -328,8 +328,8 @@ def new_customer():
     global pincode_label
     pincode=Entry(frame2,width=30,border=2)
     pincode.grid(row=7,column=1,padx=20,pady=20,sticky=W)
-    piframe2ode_label=Label(frame2,text="Pincode")
-    piframe2ode_label.grid(row=7,column=0,padx=20,pady=10,sticky=W)
+    pincode_label=Label(frame2,text="Pincode")
+    pincode_label.grid(row=7,column=0,padx=20,pady=10,sticky=W)
 
     global mobile1
     global mobile_label1
@@ -410,7 +410,7 @@ def new_customer():
 def list_customer():
     list_customer_query=Tk()
     list_customer_query.title("LIFEFINE CUSTOMER DATA")
-    list_customer_query.iconbitmap(lf2.ico")
+    list_customer_query.iconbitmap("./lf2.ico")
     list_customer_query.geometry("800x600")
     list_customer_query.configure(bg="beige")
     list_customer_query.state('zoomed')

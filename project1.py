@@ -10,7 +10,7 @@ import mysql.connector
 cwd=os.getcwd()
 main=Tk()
 main.title("LifeFine")
-#main.iconbitmap(cwd+"\LIFEFINE\icons\lf2.ico")
+main.iconbitmap("./images/lf2.ico")
 main.geometry("1500x800")
 main.configure(bg="antiquewhite4")
 main.state('zoomed')
@@ -218,7 +218,7 @@ def new_customer():
     global nc
     nc=Tk()
     nc.title("NEW CUSTOMER BAR")
-    #nc.iconbitmap(cwd+"\LIFEFINE\icons\lf2.ico")
+    nc.iconbitmap("./lf2.ico")
     #nc.geometry("900x700")
     nc.state('zoomed')
     #nc.resizable(FALSE,FALSE) 
@@ -393,10 +393,10 @@ def customer_service(id):
     global service_window
     service_window=Tk()
     service_window.title("NEW CUSTOMER BAR")
-    #service_window.iconbitmap(cwd+"\LIFEFINE\icons\lf2.ico")
+    service_window.iconbitmap("./lf2.ico")
     service_window.geometry("900x700")
-    #service_window.state('zoomed')
-    #service_window.resizable(FALSE,FALSE)
+    service_window.state('zoomed')
+    service_window.resizable(FALSE,FALSE)
 
     sql="SELECT *FROM all_customers WHERE id_number= %s"
     idnum1=(id,)
@@ -470,7 +470,7 @@ def customer_service(id):
 def list_customer():
     list_customer_query=Tk()
     list_customer_query.title("LIFEFINE CUSTOMER DATA")
-    #list_customer_query.iconbitmap(cwd+"\LIFEFINE\icons\lf2.ico")
+    list_customer_query.iconbitmap("./lf2.ico")
     list_customer_query.geometry("800x600")
     list_customer_query.configure(bg="beige")
     list_customer_query.state('zoomed')
